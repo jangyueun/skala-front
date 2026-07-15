@@ -1,0 +1,181 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap');
+
+body {
+    font-family: 'Nanum Gothic', sans-serif;
+    line-height: 1.6;                    
+    background-color: #FFF0F5;               /* 연핑크 배경 */
+    color: #5c4b51;                          /* 다크 초코 글자 */
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    color: #8e44ad;                          /* 보라색 */
+    font-size: 2.2rem;                   
+    padding-bottom: 12px;                  
+    text-shadow: 1px 1px 2px rgba(255, 182, 193, 0.5); /* 핑크색 그림자 */
+}
+
+h2 {
+    color: #9b59b6;                          /* 연보라색 */
+    font-size: 1.6rem;                     
+    background-color: #F1E5FF;               /* 화이트 바이올렛 배경 */
+    padding: 10px 15px;                      
+    border-left: 5px solid #FFB7ca;          /* 왼쪽에 포인트 */
+    border-radius: 4px 12px 12px 4px;        /* 테두리 둥글둥글 */
+    margin-top: 40px;                     
+    margin-bottom: 15px;                 
+}
+
+h3 {
+    color: #ff7495;                          /* 핑크색 */
+    font-size: 1.2rem;                      
+    padding-bottom: 5px;                     
+    border-bottom: 2px dashed #FFD1DC;       /* 아래쪽에 핑크색 점선 */
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+a {
+    color: #ff7495;                          /* 핑크색 */
+    text-decoration: none;                   /* 밑줄 제거 */
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #9b59b6;                          /* 호버 시 보라색으로 변경 */
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1200px;                      
+    margin: 40px auto;                    
+    padding: 35px;                        
+    background-color: #ffffff;             
+    border-radius: 24px;                     /* 동글동글 모서리 */
+    border: 3px solid #FFE4E1;               /* 연핑크 테두리 */
+    box-shadow: 0 8px 24px rgba(255, 182, 193, 0.15); /* 핑크 그림자 */
+}
+
+.trip-card {
+    background-color: #FFF9FA;              
+    border: 2px solid #FFE4E1;               /* 연핑크 테두리 */
+    border-radius: 18px;                     /* 동글동글 모서리 */
+    padding: 20px;                           
+    margin-bottom: 25px;                     
+    box-shadow: 0 4px 10px rgba(255, 182, 193, 0.08); /* 핑크 그림자 */
+}
+
+.trip-card img {
+    display: block;                          
+    margin-bottom: 12px;                     
+    max-width: 100%;                         
+    height: auto;
+    border-radius: 12px;                     /* 이미지 모서리도 동글동글 */
+}
+
+table {
+    width: 100%;                             
+    border-collapse: collapse;               /* 이중선 테두리 제거 */
+    margin-top: 20px;
+    border-radius: 16px;
+    overflow: hidden;                        /* 둥근 테두리 밖으로 튀어나온 셀 정리 */
+}
+
+table, th, td {
+    border: 2px solid #F3E8FF !important;    /* 연보라 테두리 */
+}
+
+th, td {
+    padding: 12px;                           
+    text-align: center;                      
+}
+
+th {
+    background-color: #E8D7FF !important;    /* 시간표 헤더 연보라 */
+    color: #684a8a;
+}
+
+
+fieldset {
+    border: 2px solid #F5EEFF;               /* 연보라색 선 */
+    border-radius: 20px;                     /* 모서리 둥글게 */
+    padding: 20px;                           
+    margin-bottom: 20px;                     
+    background-color: #FCFAFF;               /* 폼 그룹 내부 배경 연보라 */
+}
+
+legend {
+    font-weight: bold;                       
+    color: #8e44ad;                          /* 보라색 */
+    background-color: #E8D7FF;               /* 연보라 알약 모양 */
+    padding: 4px 16px;                       
+    border-radius: 20px;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;                             
+    padding: 12px;                        
+    margin-top: 5px;                         
+    margin-bottom: 15px;                     
+    border: 2px solid #F0E6FF;               /* 보라 테두리 */
+    border-radius: 15px;                     /* 모서리 동글동글 */
+    font-family: inherit;                    
+}
+
+/* 입력창 클릭했을 때(Focus) 광채 효과 */
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+input[type="date"]:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #FFB7ca;                   /* 활성화 시 핑크색 테두리 */
+    box-shadow: 0 0 8px rgba(255, 183, 202, 0.6);
+}
+
+/* 라디오 버튼과 체크박스 스타일 유지 */
+input[type="radio"],
+input[type="checkbox"] {
+    width: auto;                             
+    margin-right: 5px;                       
+    cursor: pointer;                         
+}
+
+/* 자기소개창(textarea) 크기 고정 */
+textarea {
+    resize: vertical;                        
+    min-height: 120px;                       
+}
+
+.btn-submit,
+.btn-reset {
+    padding: 12px 30px;                   
+    font-size: 1em;
+    font-weight: bold;
+    border: none;                            
+    border-radius: 30px;                     /* 알약 모양 버튼 */
+    cursor: pointer;                         
+    margin-right: 10px;                      
+}
+
+.btn-submit {
+    background-color: #ff7495;               
+    color: #ffffff;                          
+}
+
+.btn-reset {
+    background-color: #D6B2FF;               
+    color: #ffffff;
+}
