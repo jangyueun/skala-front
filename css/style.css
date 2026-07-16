@@ -179,3 +179,115 @@ textarea {
     background-color: #D6B2FF;               
     color: #ffffff;
 }
+
+
+/* 메뉴를 가로로 나란히 나열 */
+nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    gap: 20px;
+}
+
+.trip-grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);   /* 3열 */
+    gap: 20px;
+}
+
+.content-wrapper {
+    display: flex;                           /* 메인, 사이드바 가로 배치 */
+    gap: 30px;                               
+    align-items: flex-start;                 
+}
+
+main {
+    flex: 7;                                
+    padding: 15px;
+}
+aside {
+    flex: 3;                               
+    background-color: #FCFAFF;               /* 사이드바에 연보라 연한 배경색 */
+    padding: 20px;
+    border: 2px solid #F3E8FF;
+    border-radius: 18px;
+}
+
+
+/* 화면 가로폭 768px 이하이면 */
+@media (max-width: 768px) {
+    /* 메인 메뉴바 세로 쌓기 */
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    /* 메인, 사이드바 세로로 */
+    .content-wrapper {
+        flex-direction: column; 
+        gap: 20px;
+    }
+
+    /* 모바일 화면을 꽉 채우도록 100% 폭 */
+    main, aside {
+        width: 100%;
+    }
+    
+    /* 여행 앨범 1열 구조로 */
+    .trip-grid-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+nav a {
+    transition: background-color 0.3s ease, color 0.3s ease; /* 0.3초 동안 스르륵 변하게 */
+    padding: 8px 16px;
+    border-radius: 20px;                     /* 메뉴 버튼도 동글동글하게 */
+}
+
+nav a:hover {
+    background-color: #ff7495;              /* 마우스 올리면 핑크 배경 */
+    color: #ffffff;                         /* 글자색은 흰색으로 변경 */
+}
+
+.btn-submit,
+.btn-reset {
+    transition: all 0.2s ease;
+}
+
+/* 회원가입 버튼에 마우스를 올리면 더 진한 핑크색으로 변경 */
+.btn-submit:hover {
+    background-color: #e85275;
+}
+
+/* 다시작성 버튼에 마우스를 올리면 더 진한 보라색으로 변경 */
+.btn-reset:hover {
+    background-color: #bd90ff;
+}
+
+/* 카드 위치, 그림자 변화 */
+.trip-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.trip-card:hover {
+    transform: translateY(-8px);            
+    box-shadow: 0 10px 24px rgba(255, 182, 193, 0.3);
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;                          /* 처음에는 투명 */
+        transform: translateY(20px);         /* 원래 위치보다 20px 아래 시작 */
+    }
+    to {
+        opacity: 1;                          /* 선명하게 */
+        transform: translateY(0);            /* 제자리 정착 */
+    }
+}
+
+/* index.html의 헤더 타이틀에 적용 */
+header h1 {
+    animation: fadeInUp 0.8s ease-out forwards;
+}
