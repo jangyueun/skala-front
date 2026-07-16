@@ -213,6 +213,74 @@ aside {
     border-radius: 18px;
 }
 
+.game-menu {
+    margin-top: 25px;
+}
+
+.weather-panel {
+    margin-top: 25px;
+}
+
+.weather-panel label {
+    display: block;
+    margin-bottom: 6px;
+    color: #8e44ad;
+    font-weight: 700;
+}
+
+.weather-panel select {
+    width: 100%;
+    padding: 10px 12px;
+    border: 2px solid #F0E6FF;
+    border-radius: 12px;
+    background-color: #ffffff;
+    color: #5c4b51;
+    font-family: inherit;
+    font-weight: 700;
+}
+
+.weather-box {
+    margin-top: 14px;
+    padding: 16px;
+    background-color: #FFF9FA;
+    border: 2px dashed #FFB7ca;
+    border-radius: 14px;
+    color: #5c4b51;
+}
+
+.weather-box h4 {
+    margin-top: 0;
+    color: #9b59b6;
+}
+
+.weather-box p {
+    margin: 10px 0;
+}
+
+.weather-loading {
+    color: #ff7495;
+    font-weight: 700;
+}
+
+.game-menu button {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 12px 14px;
+    border: none;
+    border-radius: 10px;
+    background-color: #ff7495;
+    color: #ffffff;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.game-menu button:hover {
+    background-color: #9b59b6;
+}
+
 
 /* 화면 가로폭 768px 이하이면 */
 @media (max-width: 768px) {

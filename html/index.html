@@ -52,6 +52,27 @@
                 <h2>🌤️ 실시간 정보</h2>
                 <p>현재 위치: 광주광역시 광산구 📍</p>
                 <p>추천 학습 사이트: <a href="https://www.w3schools.com" target="_blank">W3Schools</a></p>
+
+                <section class="weather-panel">
+                    <h2>🌤️ 실시간 세계 날씨</h2>
+                    <label for="city-select">도시 선택</label>
+                    <select id="city-select">
+                        <option value="seoul">대한민국 서울 KR</option>
+                        <option value="tokyo">일본 도쿄 JP</option>
+                        <option value="paris">프랑스 파리 FR</option>
+                        <option value="newyork">미국 뉴욕 US</option>
+                    </select>
+                    <div id="weather-box" class="weather-box">
+                        도시를 선택하면 날씨 정보가 표시됩니다.
+                    </div>
+                </section>
+
+                <section class="game-menu">
+                    <h2>🎮 재미 기능 선택</h2>
+                    <button type="button" onclick="startUpDownGame()">업다운 게임 🚀</button>
+                    <button type="button" onclick="calculateGrade()">성적 계산기 📊</button>
+                    <button type="button" onclick="showMyBag()">내 가방 보기 🎒</button>
+                </section>
             </aside>
         </div>
         <hr>
@@ -61,5 +82,9 @@
             <p><small>© 2026 유은 포트폴리오. 모든 태그는 웹 표준 시맨틱 태그로 작성되었습니다.</small></p>
         </footer>
     </div>
+    <script src="../script/upDown.js"></script>
+    <script src="../script/grade.js"></script>
+    <script src="../script/bag.js"></script>
+    <script type="module" src="../script/realtimeInfo.js"></script>
 </body>
 </html>
