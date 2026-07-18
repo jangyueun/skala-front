@@ -1,74 +1,75 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap');
 
+/* 기본 페이지 스타일 */
 body {
     font-family: 'Nanum Gothic', sans-serif;
     line-height: 1.6;                    
-    background-color: #FFF0F5;               /* 연핑크 배경 */
-    color: #5c4b51;                          /* 다크 초코 글자 */
+    background-color: #FFF0F5;               
+    color: #5c4b51;                          
     margin: 0;
     padding: 0;
 }
 
 h1 {
-    color: #8e44ad;                          /* 보라색 */
+    color: #8e44ad;                          
     font-size: 2.2rem;                   
     padding-bottom: 12px;                  
-    text-shadow: 1px 1px 2px rgba(255, 182, 193, 0.5); /* 핑크색 그림자 */
+    text-shadow: 1px 1px 2px rgba(255, 182, 193, 0.5); 
 }
 
 h2 {
-    color: #9b59b6;                          /* 연보라색 */
+    color: #9673b8;                          
     font-size: 1.6rem;                     
-    background-color: #F1E5FF;               /* 화이트 바이올렛 배경 */
+    background-color: #F1E5FF;               
     padding: 10px 15px;                      
-    border-left: 5px solid #FFB7ca;          /* 왼쪽에 포인트 */
-    border-radius: 4px 12px 12px 4px;        /* 테두리 둥글둥글 */
+    border-left: 5px solid #FFD1DC;          
+    border-radius: 4px 12px 12px 4px;        
     margin-top: 40px;                     
     margin-bottom: 15px;                 
 }
 
 h3 {
-    color: #ff7495;                          /* 핑크색 */
+    color: #FF9FB7;                          
     font-size: 1.2rem;                      
     padding-bottom: 5px;                     
-    border-bottom: 2px dashed #FFD1DC;       /* 아래쪽에 핑크색 점선 */
+    border-bottom: 2px dashed #FFD1DC;       
     margin-top: 25px;
     margin-bottom: 10px;
 }
 
 a {
-    color: #ff7495;                          /* 핑크색 */
-    text-decoration: none;                   /* 밑줄 제거 */
+    color: #FF9FB7;                          
+    text-decoration: none;                   
 }
 
 a:hover {
     text-decoration: underline;
-    color: #9b59b6;                          /* 호버 시 보라색으로 변경 */
+    color: #9673b8;                          
 }
 
-
+/* 공통 박스 설정 */
 * {
     box-sizing: border-box;
 }
 
+/* 공통 컨테이너와 카드 */
 .container {
     max-width: 1200px;                      
     margin: 40px auto;                    
     padding: 35px;                        
     background-color: #ffffff;             
-    border-radius: 24px;                     /* 동글동글 모서리 */
-    border: 3px solid #FFE4E1;               /* 연핑크 테두리 */
-    box-shadow: 0 8px 24px rgba(255, 182, 193, 0.15); /* 핑크 그림자 */
+    border-radius: 24px;                     
+    border: 3px solid #FFE4E1;               
+    box-shadow: 0 8px 24px rgba(255, 182, 193, 0.15); 
 }
 
 .trip-card {
     background-color: #FFF9FA;              
-    border: 2px solid #FFE4E1;               /* 연핑크 테두리 */
-    border-radius: 18px;                     /* 동글동글 모서리 */
+    border: 2px solid #FFE4E1;               
+    border-radius: 18px;                     
     padding: 20px;                           
     margin-bottom: 25px;                     
-    box-shadow: 0 4px 10px rgba(255, 182, 193, 0.08); /* 핑크 그림자 */
+    box-shadow: 0 4px 10px rgba(255, 182, 193, 0.08); 
 }
 
 .trip-card img {
@@ -76,19 +77,20 @@ a:hover {
     margin-bottom: 12px;                     
     max-width: 100%;                         
     height: auto;
-    border-radius: 12px;                     /* 이미지 모서리도 동글동글 */
+    border-radius: 12px;                     
 }
 
+/* 표 스타일 */
 table {
     width: 100%;                             
-    border-collapse: collapse;               /* 이중선 테두리 제거 */
+    border-collapse: collapse;               
     margin-top: 20px;
     border-radius: 16px;
-    overflow: hidden;                        /* 둥근 테두리 밖으로 튀어나온 셀 정리 */
+    overflow: hidden;                        
 }
 
 table, th, td {
-    border: 2px solid #F3E8FF !important;    /* 연보라 테두리 */
+    border: 2px solid #F3E8FF !important;    
 }
 
 th, td {
@@ -97,23 +99,23 @@ th, td {
 }
 
 th {
-    background-color: #E8D7FF !important;    /* 시간표 헤더 연보라 */
+    background-color: #E8D7FF !important;    
     color: #684a8a;
 }
 
-
+/* 회원가입 폼 스타일 */
 fieldset {
-    border: 2px solid #F5EEFF;               /* 연보라색 선 */
-    border-radius: 20px;                     /* 모서리 둥글게 */
+    border: 2px solid #F5EEFF;               
+    border-radius: 20px;                     
     padding: 20px;                           
     margin-bottom: 20px;                     
-    background-color: #FCFAFF;               /* 폼 그룹 내부 배경 연보라 */
+    background-color: #FCFAFF;               
 }
 
 legend {
     font-weight: bold;                       
-    color: #8e44ad;                          /* 보라색 */
-    background-color: #E8D7FF;               /* 연보라 알약 모양 */
+    color: #8e44ad;                          
+    background-color: #E8D7FF;               
     padding: 4px 16px;                       
     border-radius: 20px;
 }
@@ -128,12 +130,11 @@ textarea {
     padding: 12px;                        
     margin-top: 5px;                         
     margin-bottom: 15px;                     
-    border: 2px solid #F0E6FF;               /* 보라 테두리 */
-    border-radius: 15px;                     /* 모서리 동글동글 */
+    border: 2px solid #F0E6FF;               
+    border-radius: 15px;                     
     font-family: inherit;                    
 }
 
-/* 입력창 클릭했을 때(Focus) 광채 효과 */
 input[type="text"]:focus,
 input[type="password"]:focus,
 input[type="email"]:focus,
@@ -141,11 +142,10 @@ input[type="date"]:focus,
 select:focus,
 textarea:focus {
     outline: none;
-    border-color: #FFB7ca;                   /* 활성화 시 핑크색 테두리 */
+    border-color: #FFB7ca;                   
     box-shadow: 0 0 8px rgba(255, 183, 202, 0.6);
 }
 
-/* 라디오 버튼과 체크박스 스타일 유지 */
 input[type="radio"],
 input[type="checkbox"] {
     width: auto;                             
@@ -153,7 +153,6 @@ input[type="checkbox"] {
     cursor: pointer;                         
 }
 
-/* 자기소개창(textarea) 크기 고정 */
 textarea {
     resize: vertical;                        
     min-height: 120px;                       
@@ -165,23 +164,22 @@ textarea {
     font-size: 1em;
     font-weight: bold;
     border: none;                            
-    border-radius: 30px;                     /* 알약 모양 버튼 */
+    border-radius: 30px;                     
     cursor: pointer;                         
     margin-right: 10px;                      
 }
 
 .btn-submit {
-    background-color: #ff7495;               
-    color: #ffffff;                          
+    background-color: #FFD1DC;               
+    color: #8e44ad;                          
 }
 
 .btn-reset {
-    background-color: #D6B2FF;               
-    color: #ffffff;
+    background-color: #E8D7FF;               
+    color: #8e44ad;
 }
 
-
-/* 메뉴를 가로로 나란히 나열 */
+/* 레이아웃 스타일 */
 nav ul {
     display: flex;
     list-style: none;
@@ -191,12 +189,12 @@ nav ul {
 
 .trip-grid-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);   /* 3열 */
+    grid-template-columns: repeat(3, 1fr);   
     gap: 20px;
 }
 
 .content-wrapper {
-    display: flex;                           /* 메인, 사이드바 가로 배치 */
+    display: flex;                           
     gap: 30px;                               
     align-items: flex-start;                 
 }
@@ -205,14 +203,16 @@ main {
     flex: 7;                                
     padding: 15px;
 }
+
 aside {
     flex: 3;                               
-    background-color: #FCFAFF;               /* 사이드바에 연보라 연한 배경색 */
+    background-color: #FCFAFF;               
     padding: 20px;
     border: 2px solid #F3E8FF;
     border-radius: 18px;
 }
 
+/* 사이드바 기능 영역 */
 .game-menu {
     margin-top: 25px;
 }
@@ -250,7 +250,7 @@ aside {
 
 .weather-box h4 {
     margin-top: 0;
-    color: #9b59b6;
+    color: #9673b8;
 }
 
 .weather-box p {
@@ -258,7 +258,7 @@ aside {
 }
 
 .weather-loading {
-    color: #ff7495;
+    color: #FF9FB7;
     font-weight: 700;
 }
 
@@ -267,10 +267,10 @@ aside {
     width: 100%;
     margin-bottom: 10px;
     padding: 12px 14px;
-    border: none;
+    border: 2px solid #F3E8FF;
     border-radius: 10px;
-    background-color: #ff7495;
-    color: #ffffff;
+    background-color: #FFD1DC;
+    color: #8e44ad;
     font-family: inherit;
     font-size: 1rem;
     font-weight: 700;
@@ -278,45 +278,40 @@ aside {
 }
 
 .game-menu button:hover {
-    background-color: #9b59b6;
+    background-color: #F1E5FF;
+    color: #8e44ad;
 }
 
-
-/* 화면 가로폭 768px 이하이면 */
 @media (max-width: 768px) {
-    /* 메인 메뉴바 세로 쌓기 */
     nav ul {
         flex-direction: column;
         gap: 10px;
     }
     
-    /* 메인, 사이드바 세로로 */
     .content-wrapper {
         flex-direction: column; 
         gap: 20px;
     }
-
-    /* 모바일 화면을 꽉 채우도록 100% 폭 */
+    
     main, aside {
         width: 100%;
     }
     
-    /* 여행 앨범 1열 구조로 */
     .trip-grid-container {
         grid-template-columns: 1fr;
     }
 }
 
-
+/* 인터랙션 효과 */
 nav a {
-    transition: background-color 0.3s ease, color 0.3s ease; /* 0.3초 동안 스르륵 변하게 */
+    transition: background-color 0.3s ease, color 0.3s ease; 
     padding: 8px 16px;
-    border-radius: 20px;                     /* 메뉴 버튼도 동글동글하게 */
+    border-radius: 20px;                     
 }
 
 nav a:hover {
-    background-color: #ff7495;              /* 마우스 올리면 핑크 배경 */
-    color: #ffffff;                         /* 글자색은 흰색으로 변경 */
+    background-color: #FFD1DC;              
+    color: #8e44ad;                         
 }
 
 .btn-submit,
@@ -324,17 +319,14 @@ nav a:hover {
     transition: all 0.2s ease;
 }
 
-/* 회원가입 버튼에 마우스를 올리면 더 진한 핑크색으로 변경 */
 .btn-submit:hover {
-    background-color: #e85275;
+    background-color: #FFB7ca;
 }
 
-/* 다시작성 버튼에 마우스를 올리면 더 진한 보라색으로 변경 */
 .btn-reset:hover {
-    background-color: #bd90ff;
+    background-color: #DCC6FF;
 }
 
-/* 카드 위치, 그림자 변화 */
 .trip-card {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -344,18 +336,82 @@ nav a:hover {
     box-shadow: 0 10px 24px rgba(255, 182, 193, 0.3);
 }
 
+/* 등장 애니메이션 */
 @keyframes fadeInUp {
     from {
-        opacity: 0;                          /* 처음에는 투명 */
-        transform: translateY(20px);         /* 원래 위치보다 20px 아래 시작 */
+        opacity: 0;                          
+        transform: translateY(20px);         
     }
     to {
-        opacity: 1;                          /* 선명하게 */
-        transform: translateY(0);            /* 제자리 정착 */
+        opacity: 1;                          
+        transform: translateY(0);            
     }
 }
 
-/* index.html의 헤더 타이틀에 적용 */
 header h1 {
     animation: fadeInUp 0.8s ease-out forwards;
+}
+
+/* 시간표와 식단표 */
+.table-scroll {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.schedule-table,
+.meal-table {
+    min-width: 760px;
+    background-color: #ffffff;
+}
+
+.schedule-table th,
+.meal-table th {
+    font-weight: 800;
+}
+
+.schedule-table td:first-child,
+.meal-table th:first-child {
+    color: #8e44ad;
+    font-weight: 800;
+    background-color: #FCFAFF;
+}
+
+.schedule-table td {
+    vertical-align: middle;
+    background-color: #FFF9FA;
+}
+
+.schedule-table .lunch-row td {
+    background-color: #FFF0F5;
+    color: #FF9FB7;
+    font-weight: 800;
+}
+
+.meal-table th {
+    font-size: 1.05rem;
+}
+
+.meal-table td {
+    vertical-align: top;
+    line-height: 1.7;
+    background-color: #FFF9FA;
+}
+
+.meal-table tbody tr:nth-child(even) td {
+    background-color: #FCFAFF;
+}
+
+@media (max-width: 768px) {
+    .schedule-table,
+    .meal-table {
+        min-width: 720px;
+    }
+
+    .schedule-table th,
+    .schedule-table td,
+    .meal-table th,
+    .meal-table td {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
 }

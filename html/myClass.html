@@ -3,74 +3,117 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>나의 수업</title>
+    <title>나의 강의 시간표</title>
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
     <div class="container">
-        <h1>📅 나의 강의 시간표</h1>
-        
-        <table border="1" cellspacing="0" cellpadding="7">
-            <thead>
-                <tr bgcolor="#eeeeee">
-                    <th>시간</th>
-                    <th>월요일</th>
-                    <th>화요일</th>
-                    <th>수요일</th>
-                    <th>목요일</th>
-                    <th>금요일</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>09:00 - 10:00</td>
-                    <td rowspan="3">팀빌딩</td>
-                    <td rowspan="2">HTML 기초</td>
-                    <td rowspan="3">CSS 심화</td>
-                    <td>데이터 분석</td>
-                    <td rowspan="3">Java</td>
-                </tr>
-                <tr>
-                    <td>10:00 - 11:00</td>
-                    <td rowspan="2">Python</td>
-                </tr>
-                <tr>
-                    <td>11:00 - 12:00</td>
-                    <td>HTML Form</td>
-                </tr>
-                
-                <tr align="center" bgcolor="#f9f9f9">
-                    <td>12:00 - 13:00</td>
-                    <td colspan="5">🍱 점 심 시 간 🍱</td>
-                </tr>
-                
-                <tr>
-                    <td>13:00 - 14:00</td>
-                    <td rowspan="2">Git 이해</td>
-                    <td rowspan="2">HTML 심화</td>
-                    <td rowspan="2">JavaScript 기초</td>
-                    <td rowspan="3">스마트 데이터</td>
-                    <td rowspan="3">SpringBoot</td>
-                </tr>
-                <tr>
-                    <td>14:00 - 15:00</td>
-                </tr>
-                <tr>
-                    <td>15:00 - 16:00</td>
-                    <td rowspan="3">Git 활용</td>
-                    <td rowspan="3">CSS 기초</td>
-                    <td rowspan="3">JavaScript 심화</td>
-                </tr>
-                <tr>
-                    <td>16:00 - 17:00</td>
-                    <td rowspan="2">기초 통계</td>
-                    <td rowspan="3">Rest API 구현</td>
-                </tr>
-                <tr>
-                    <td>17:00 - 18:00</td>
-                </tr>
-            </tbody>
-        </table>
+        <h1>🗓️ 나의 강의 시간표</h1>
+
+        <div class="table-scroll">
+            <table class="schedule-table">
+                <thead>
+                    <tr>
+                        <th>시간</th>
+                        <th>월요일</th>
+                        <th>화요일</th>
+                        <th>수요일</th>
+                        <th>목요일</th>
+                        <th>금요일</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>09:00 - 10:00</td>
+                        <td rowspan="3">팀빌딩 🤝</td>
+                        <td rowspan="2">HTML 기초 🌐</td>
+                        <td rowspan="3">CSS 심화 🎨</td>
+                        <td>IT 트렌드 특강 💡</td>
+                        <td rowspan="3">자바스크립트<br>심화 실습 🚀</td>
+                    </tr>
+                    <tr>
+                        <td>10:00 - 11:00</td>
+                        <td rowspan="2">데이터베이스<br>SQL 실습 🗄️</td>
+                    </tr>
+                    <tr>
+                        <td>11:00 - 12:00</td>
+                        <td>HTML Form 📝</td>
+                    </tr>
+                    <tr class="lunch-row">
+                        <td>12:00 - 13:00</td>
+                        <td colspan="5">🍱 점심시간 🍱</td>
+                    </tr>
+                    <tr>
+                        <td>13:00 - 14:00</td>
+                        <td rowspan="2">Git 이해 🌱</td>
+                        <td rowspan="2">HTML 심화 🧩</td>
+                        <td rowspan="2">JavaScript 기초 🚀</td>
+                        <td rowspan="3">자료구조 📊</td>
+                        <td>개인 프로젝트 🧭</td>
+                    </tr>
+                    <tr>
+                        <td>14:00 - 15:00</td>
+                        <td rowspan="3">오픈소스<br>소프트웨어 🔓</td>
+                    </tr>
+                    <tr>
+                        <td>15:00 - 16:00</td>
+                        <td rowspan="3">Git 활용 🌸</td>
+                        <td rowspan="3">CSS 기초 🎀</td>
+                        <td rowspan="3">JavaScript 심화 ⚡</td>
+                    </tr>
+                    <tr>
+                        <td>16:00 - 17:00</td>
+                        <td rowspan="2">빅데이터<br>분석 실무 📉</td>
+                    </tr>
+                    <tr>
+                        <td>17:00 - 18:00</td>
+                        <td>주간 회고 📝</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h2>🍽️ 이번 주 식단표</h2>
+        <div class="table-scroll">
+            <table class="meal-table">
+                <thead>
+                    <tr>
+                        <th>구분</th>
+                        <th>7월 13일(월)</th>
+                        <th>7월 14일(화)</th>
+                        <th>7월 15일(수)</th>
+                        <th>7월 16일(목)</th>
+                        <th>7월 17일(금)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>조식</th>
+                        <td>백미밥<br>호박새우젓국<br>미트볼야채볶음<br>콩자반<br>깍두기<br>코코볼*우유</td>
+                        <td>백미밥<br>얼무된장국<br>돼지고기장조림<br>고사리나물<br>배추김치<br>셀프핫도그</td>
+                        <td>백미밥<br>버섯들깨국<br>소불고기<br>오이지무침<br>포기김치<br>초코파이</td>
+                        <td>백미밥<br>알길이된장국<br>오리야채볶음<br>쌈무*머스타드<br>포기김치<br>아몬드시리얼*우유</td>
+                        <td>백미밥<br>꽃게무국<br>스크램블에그<br>파프리카어묵볶음<br>배추김치<br>감자샐러드빵</td>
+                    </tr>
+                    <tr>
+                        <th>중식</th>
+                        <td>흑미밥<br>황태미역국<br>파채불고기<br>건새우볶음<br>깻순겉절이<br>석박지</td>
+                        <td>백미밥<br>옥수수스프<br>토마토스파게티<br>돈육찹스테이크<br>망고양상추샐러드<br>배추김치</td>
+                        <td>♥초복♥<br>닭다리 닭죽<br>메밀전병<br>아삭이고추무침<br>삼배추겉절이 / 수박<br>열무김치</td>
+                        <td>백미밥<br>참치김치찌개<br>어니언돈까스<br>돈나물초무침<br>자반볶음<br>깍두기</td>
+                        <td>흑미밥<br>잔치국수<br>김치전<br>브로컬리두부무침<br>과일사라다<br>열무김치</td>
+                    </tr>
+                    <tr>
+                        <th>석식</th>
+                        <td>흑미밥<br>대구탕<br>부추전<br>오이무침<br>바나나<br>배추김치</td>
+                        <td>백미밥<br>파송송계란국<br>부대햄볶음<br>타코야끼<br>부추겉절이<br>석박지</td>
+                        <td>백미밥<br>순두부찌개<br>돈육단호박찜<br>새송이버섯볶음<br>해초무침<br>배추김치</td>
+                        <td>백미밥<br>콩나물국<br>닭갈비<br>애호박나물<br>땅콩조림<br>배추김치</td>
+                        <td>백미밥<br>돈등뼈해장국<br>떡갈비케찹볶음<br>얼갈이나물<br>오복지무침<br>배추김치</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
 </body>
 </html>
