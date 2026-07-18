@@ -1,15 +1,11 @@
 export async function getLiveWeather(lat, lon) {
-    var url = "https://api.open-meteo.com/v1/forecast?latitude=" + lat +
-        "&longitude=" + lon +
-        "&current=temperature_2m,relative_humidity_2m";
+    const url = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current=temperature_2m,relative_humidity_2m`;
 
     try {
-        var response = await fetch(url);
-        if (!response.ok) {
-            throw new Error("서버 응답 불안정");
-        }
+        const response = await fetch(url);
+        if (!response.ok) throw new Error("서버 응답 불안정");
 
-        var data = await response.json();
+        const data = await response.json();
 
         return {
             temp: data.current.temperature_2m,
