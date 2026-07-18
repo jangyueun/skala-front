@@ -1,43 +1,47 @@
-import { getCityWeatherData, getWeather } from "./weatherAPI.js";
+import { getLiveWeather } from "./weatherAPI.js";
 
 var citySelect = document.querySelector("#city-select");
 var weatherBox = document.querySelector("#weather-box");
-var cityWeatherData = getCityWeatherData();
 
-function showCityInfo(cityKey) {
-    var city = cityWeatherData[cityKey];
-
+function showCityInfo(cityName, lat, lon) {
     weatherBox.innerHTML =
-        "<h4>📍 " + city.name + " 정보</h4>" +
-        "<p>위도(Latitude): " + city.latitude + "</p>" +
-        "<p>경도(Longitude): " + city.longitude + "</p>";
+        "<h4>📍 " + cityName + " 정보</h4>" +
+        "<p>위도(Latitude): " + lat + "</p>" +
+        "<p>경도(Longitude): " + lon + "</p>";
 }
 
-async function showRealtimeWeather(cityKey) {
-    var city = cityWeatherData[cityKey];
-
+async function showRealtimeWeather(cityName, lat, lon) {
     weatherBox.innerHTML =
         "<p class='weather-loading'>실시간 날씨 로딩 중... ⏳</p>";
 
-    try {
-        var weather = await getWeather(cityKey);
+    var weatherInfo = await getLiveWeather(lat, lon);
 
+    if (weatherInfo) {
         weatherBox.innerHTML =
-            "<h4>🌎 " + weather.cityName + " 실시간 날씨</h4>" +
-            "<p>🌡️ 현재 기온: " + weather.temperature + "°C</p>" +
-            "<p>💧 현재 습도: " + weather.humidity + "%</p>";
-    } catch (error) {
+            "<h4>🌎 " + cityName + " 실시간 날씨</h4>" +
+            "<p>🌡️ 현재 기온: " + weatherInfo.temp + "°C</p>" +
+            "<p>💧 현재 습도: " + weatherInfo.humidity + "%</p>";
+    } else {
         weatherBox.innerHTML =
-            "<h4>🌎 " + city.name + " 실시간 날씨</h4>" +
+            "<h4>🌎 " + cityName + " 실시간 날씨</h4>" +
             "<p>날씨 정보를 불러오지 못했습니다.</p>" +
             "<p>잠시 후 다시 시도해주세요.</p>";
     }
 }
 
-citySelect.addEventListener("change", function () {
-    showCityInfo(citySelect.value);
-    showRealtimeWeather(citySelect.value);
-});
+citySelect.addEventListener("change", function (event) {
+    var selectedValue = event.target.value;
 
-showCityInfo(citySelect.value);
-showRealtimeWeather(citySelect.value);
+    if (selectedValue === "none") {
+        weatherBox.innerHTML = "<p>도시를 선택하세요.</p>";
+        return;
+    }
+
+    var coords = selectedValue.split(",");
+    var lat = coords[0];
+    var lon = coords[1];
+    var cityName = citySelect.options[citySelect.selectedIndex].text;
+
+    showCityInfo(cityName, lat, lon);
+    showRealtimeWeather(cityName, lat, lon);
+});
